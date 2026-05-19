@@ -141,6 +141,7 @@ body {
     height: 100%;
     width: 100%;
     text-align: center;
+    min-height: 0;
 }
 
 .card-description {
@@ -149,9 +150,13 @@ body {
     line-height: 1.6;
     margin: 0 0 20px 0;
     flex-grow: 1;
+    min-height: 0;
+    overflow: auto;
+    max-height: calc(100% - 70px);
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 .card-button {
@@ -258,6 +263,29 @@ body {
     .card-content h5 {
         font-size: 1.15rem;
     }
+
+    .card-description {
+        font-size: 0.88rem;
+        max-height: calc(100% - 60px);
+    }
+
+    .card-button {
+        padding: 10px 24px;
+        font-size: 0.95rem;
+    }
+
+    .card-hover-content {
+        align-items: stretch;
+    }
+
+    .card-description {
+        text-align: left;
+        overflow-y: auto;
+        max-height: calc(100% - 70px);
+        padding-right: 8px;
+        display: block;
+    }
+
 
     .footer-custom {
         text-align: center;
