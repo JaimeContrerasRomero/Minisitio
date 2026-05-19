@@ -576,3 +576,138 @@ body {
         text-align: left;
     }
 }
+
+/* =========================
+    RECURSOS DE INTERÉS
+==========================*/
+.recursos-container {
+    background-color: white;
+    min-height: calc(100vh - 360px - 300px);
+    padding: 50px 0;
+}
+
+.recursos-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.recurso-item {
+    display: flex;
+    gap: 25px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    align-items: flex-start;
+}
+
+.recurso-item:hover {
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.15);
+    transform: translateY(-4px);
+    background-color: #ffffff;
+}
+
+.recurso-logo {
+    flex-shrink: 0;
+    width: 120px;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.recurso-content {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    justify-content: center;
+}
+
+.recurso-title {
+    font-size: 1.35rem;
+    font-weight: bold;
+    color: #1f2937;
+    margin: 0;
+    line-height: 1.4;
+}
+
+.recurso-link {
+    display: inline-block;
+    font-size: 1rem;
+    color: #9fc24e;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    width: fit-content;
+}
+
+.recurso-link:hover {
+    color: #7fa43a;
+    padding-left: 5px;
+}
+
+/* =========================
+    TABLET - RECURSOS
+==========================*/
+@media(max-width: 1024px) {
+    .recurso-item {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    .recurso-logo {
+        width: 100px;
+        height: 100px;
+    }
+
+    .recurso-title {
+        font-size: 1.2rem;
+    }
+
+    .recurso-link {
+        font-size: 0.95rem;
+    }
+}
+
+/* =========================
+    MÓVIL - RECURSOS
+==========================*/
+@media(max-width: 768px) {
+    .recursos-container {
+        padding: 30px 0;
+    }
+
+    .recursos-list {
+        gap: 20px;
+    }
+
+    .recurso-item {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .recurso-logo {
+        width: 90px;
+        height: 90px;
+    }
+
+    .recurso-title {
+        font-size: 1.1rem;
+    }
+
+    .recurso-link {
+        font-size: 0.9rem;
+    }
+
+    .recurso-link:hover {
+        padding-left: 0;
+    }
+}
