@@ -386,3 +386,34 @@ body {
 .comment-input::placeholder {
     color: #9ca3af;
 }
+
+/* =========================
+   VIDEOS
+==========================*/
+.videos-container {
+    background-color: white;
+    border-top: 1px solid #e0e0e0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.video-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+}
+
+.video-wrapper video,
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive para móvil */
+@media(max-width: 768px) {
+    .video-wrapper {
+        aspect-ratio: 16 / 9;
+    }
+}
